@@ -130,7 +130,7 @@ header .board div:hover {
 
 
 .album {
-	display: block;
+    display: block;
     width: 1150px;
     margin: auto;
     margin-top: 70px;
@@ -161,6 +161,7 @@ header .board div:hover {
     height: 100%;
     width: 100%;
 }
+
 
 .album .albumName {
     font-size: 22px;
@@ -198,7 +199,7 @@ header .board div:hover {
 }
 
 .album .create {
-	display: none;
+    display: none;
     width: 500px;
     height: 350px;
     position: fixed;
@@ -211,129 +212,176 @@ header .board div:hover {
     z-index: 999999999;
 }
 
-.fullCover{
-	display: none;
-	position: fixed;
-	width: 100%;
-	background: lightgray;
-	opacity: 0.75;
-	top: 0;
-	left: 0;
-	z-index: 9999999;
+.fullCover {
+    display: none;
+    position: fixed;
+    width: 100%;
+    background: lightgray;
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
 }
 
-.create .top{
-	width: 100%;
-	height: 45px;
-	background: #f4f9f9;
+.create .top {
+    width: 100%;
+    height: 45px;
+    background: #f4f9f9;
 }
 
-.create .top p{
-	display: inline-block;
-	float: left;
-	line-height: 45px;
-	margin-left: 4%;
+.create .top p {
+    display: inline-block;
+    float: left;
+    line-height: 45px;
+    margin-left: 4%;
 }
 
-.create .out{
-	float: right;
-	height: 100%;
-	width: 45px;
-	background: url(../icon/out.png) no-repeat;
-	background-size: 70%;
-	background-position: 0px 5px;
-	cursor: pointer;
+.create .out {
+    float: right;
+    height: 100%;
+    width: 45px;
+    background: url(../icon/out.png) no-repeat;
+    background-size: 70%;
+    background-position: 0px 5px;
+    cursor: pointer;
 }
 
-.name, .permission{
-	width: 70%;
-	height: 40px;
-	margin: auto;
-	margin-top: 40px;
+.name,
+.permission {
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    margin-top: 40px;
 }
 
-.albumSetting p{
-	float: left;
-	font-size: 20px;
-	line-height: 40px;
+.albumSetting p {
+    float: left;
+    font-size: 20px;
+    line-height: 40px;
 }
 
-.albumSetting input{
-	float: right;
-	width: 220px;
-	height: 36px;
-	font-size: 20px;
+.albumSetting input {
+    float: right;
+    width: 220px;
+    height: 36px;
+    font-size: 20px;
 }
 
-select{
-	width: 220px;
-	height: 30px;
-	float: right;
+select {
+    width: 220px;
+    height: 30px;
+    float: right;
 }
 
-.btn{
-	width: 70%;
-	height: 26px;
-	margin: auto;
-	margin-top: 80px;
-
+.btn {
+    width: 70%;
+    height: 26px;
+    margin: auto;
+    margin-top: 80px;
 }
 
-.btn div{
-	width: 60px;
-	height: 100%;
-	float: right;
-	background: white;
-	text-align: center;
-	border-radius: 10%;
-	margin-right: 4%;
-	box-shadow: 0px 10px 20px 2px lightgray;
-	cursor: pointer;
-}
-.btn div:hover{
-	background: #40abd5;
-	color: white;
+.btn div {
+    width: 60px;
+    height: 100%;
+    float: right;
+    background: white;
+    text-align: center;
+    border-radius: 10%;
+    margin-right: 4%;
+    box-shadow: 0px 10px 20px 2px lightgray;
+    cursor: pointer;
 }
 
+.btn div:hover {
+    background: #40abd5;
+    color: white;
+}
 
 
-
-.showPicture{
-	display: none;
+.showPicture {
+    display: none;
     width: 1150px;
     margin: auto;
     margin-top: 110px;
 }
-.bar{
-	width: 100%;
-	background: rgba(90, 190, 250, 0.16);
+
+.showPicture div {
+    display: inline-block;
 }
-.showPicture .upload{
-	display: inline-block;
-	width: 120px;
+
+.bar {
+    width: 100%;
+    height: 60px;
+    background: rgba(90, 190, 250, 0.16);
+}
+
+.showPicture .upload {
+    width: 100px;
+    height: 35px;
+    margin-left: 40px;
+    margin-top: 1%;
+    float: left;
+    color: white;
+    font-family: 圆体;
+    text-align: center;
+    line-height: 35px;
+    background: #1da1f2;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.showPicture .upload:hover {}
+
+.showPicture .albumName {
+    float: left;
+    height: 100%;
+    font-size: 35px;
+    line-height: 35px;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.showPicture .num {
+    font-size: 15px;
+    line-height: 25px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.showPicture .delete {
+    height: 35px;
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    background: white;
+    box-shadow: 0px 5px 5px 1px gray;
+    float: right;
+    margin-top: 1%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.showPicture .back{
+	width: 100px;
 	height: 35px;
-	margin-left: 40px;
-	color: white;
-	font-family: 圆体;
-	text-align: center;
+	float: right;
+	color: blue;
+	font-size: 21px;
 	line-height: 35px;
-	background: #1da1f2;
-	border-radius: 8%;
+	text-decoration: underline;
+	margin-right: 5%;
+	margin-top: 1%;
+	cursor: pointer;
+	
 }
 
-.showPicture .albumName{
-	display: inline-block;
-	float: left;
-	height: 100%;
-	font-size: 35px;
-	line-height: 35px;
+.showPicture .pictures {
+    width: 100%;
+    margin-top: 50px;
 }
 
-.showPicture .pictures{
-	width: 100%;
-	height: 400px;
-	margin-top: 50px;
-}
+
 
 
 

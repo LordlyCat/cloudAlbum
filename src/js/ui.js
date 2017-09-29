@@ -11,9 +11,10 @@ var cancel = create.querySelector('.cancel');
 var albumNameInput = create.querySelector('input');
 var selected = document.querySelector('select');
 var album = document.querySelector('.album');
+var showBorad = document.querySelector('.showPicture');
 var insert = document.querySelector('.insert');
 var createButton = create.querySelector('.check');
-
+var albumBoxes = document.querySelectorAll('.albumBox');
 
 
 //console.log(selected.options[selected.selectedIndex].text);
@@ -73,10 +74,15 @@ function createAlbum() {
     var albumName = create.querySelector('input').value;
     var permission = selected.options[selected.selectedIndex].text;
 
+    if (albumName.length > 13) {
+        alert('The name is too long !');
+        return;
+    }
+
     newAlbum.innerHTML = '<div class="cover">' +
         '<img src="" alt="">' +
         '</div>' +
-        '<p class="albumName">' + albumName + ' <span>(' + 0 + ')</span>' + '</p>' +
+        '<p class="albumName">' + '<span>' + albumName + '</span>' + ' <span>(' + 0 + ')</span>' + '</p>' +
         '<p class="time">' + 'Created at ' + getTime() + '</p>' +
         '<p class="status">' + permission + '</p>';
 
@@ -88,6 +94,9 @@ function createAlbum() {
 
     hideCreateBoard();
 
+    //重新获取相册数目
+    albumBoxes = document.querySelectorAll('.albumBox');
+    newAlbum.addEventListener('click', showAlbumPictures, false);
 }
 
 user.addEventListener('click', displayBoard, false);
@@ -103,6 +112,38 @@ addButton.addEventListener('click', function() {
 }, false);
 
 createButton.addEventListener('click', createAlbum, false);
+
+var albumName = showBorad.querySelector('.albumName'),
+    pictureNum = showBorad.querySelector('.num'),
+    permission; //= showBorad.querySelector('.permission');
+
+function showAlbumPictures (event) {
+    album.style.display = 'none';
+    showBorad.style.display = 'block';
+
+    var event = event || window.event,
+        e = event.target || event>srcElement,
+        albumBox = e.parentNode;
+
+
+    // var name,
+    //     num,
+    //     perm;
+
+    albumName.innerHTML = albumBox.childNodes[1].childNodes[0].innerHTML;
+    pictureNum.innerHTML = '共 ' + albumBox.childNodes[1].childNodes[2].innerHTML.replace(/[^\d]/g, '') + ' 张';
+    perm = albumBox.childNodes[3].innerHTML;
+
+}
+
+var back = showBorad.querySelector('.back');
+function backUpper () {
+    showBorad.style.display = 'none';
+    album.style.display = 'block';
+}
+
+back.addEventListener('click', backUpper, false);
+
 
 
 

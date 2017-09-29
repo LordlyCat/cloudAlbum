@@ -1,5 +1,6 @@
 import '../css/index.css';
 import '../js/ui.js';
+import ajax from '../js/Ajax.js';
 import icon from '../icon/pullDown.png';
 //const requireContext = require.context("../img/", true, /^\.\/.*\.jpg$/);
 //const imgArr = requireContext.keys().map(requireContext);
@@ -73,6 +74,23 @@ function show() {
 }
 
 
+var imgInput = document.querySelector('input');
+
+ajax({
+    url: '/',
+    method: 'POST',
+    
+    data: {
+        0: 2
+    },
+    contentType: 'application/x-www-form-urlencoded',
+    success: function (data) {
+        console.log(data);
+    },
+    error: function () {
+        console.log(0);
+    }
+})
 
 
 
